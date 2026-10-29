@@ -2,11 +2,10 @@
 
 Get a macOS notification when Claude Code finishes a response or needs your input. Each notification names the project and the conversation, so you can tell which one needs you when you run several at once.
 
-```
-Claude Code · my-app
-Conversation: Fix login redirect
-✅ Finished — ready for your next message
-```
+<p>
+  <img src="docs/macos-finished.png" width="374" alt="macOS notification: Claude Code · my-app, Conversation: Fix login redirect, ✅ Finished — ready for your next message">
+  <img src="docs/macos-question.png" width="374" alt="macOS notification: Claude Code · my-app, Conversation: Fix login redirect, ❓ Has a question for you">
+</p>
 
 | | When | Sound |
 |---|---|---|
