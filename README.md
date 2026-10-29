@@ -5,6 +5,7 @@ Get a macOS notification when Claude Code finishes a response or needs your inpu
 <p>
   <img src="docs/macos-finished.png" width="374" alt="macOS notification: Claude Code · my-app, Conversation: Fix login redirect, ✅ Finished — ready for your next message">
   <img src="docs/macos-question.png" width="374" alt="macOS notification: Claude Code · my-app, Conversation: Fix login redirect, ❓ Has a question for you">
+  <img src="docs/macos-permission.png" width="374" alt="macOS notification: Claude Code · my-app, Conversation: Fix login redirect, 🔐 Claude needs your permission to use Bash">
 </p>
 
 | | When | Sound |
