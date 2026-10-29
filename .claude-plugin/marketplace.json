@@ -1,0 +1,14 @@
+{
+  "name": "claude-code-macos-notifications",
+  "owner": {
+    "name": "Kevin Mathew",
+    "url": "https://github.com/kevinam99"
+  },
+  "plugins": [
+    {
+      "name": "macos-notifications",
+      "source": "./",
+      "description": "macOS notifications when Claude Code finishes a response or needs your input, labelled with the project and conversation."
+    }
+  ]
+}

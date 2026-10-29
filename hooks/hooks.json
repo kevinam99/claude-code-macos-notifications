@@ -1,0 +1,28 @@
+{
+  "description": "macOS notifications when Claude Code finishes or needs your input",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -l JavaScript \"${CLAUDE_PLUGIN_ROOT}/scripts/notify.js\"",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt|idle_prompt|elicitation_dialog",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -l JavaScript \"${CLAUDE_PLUGIN_ROOT}/scripts/notify.js\"",
+            "async": true
+          }
+        ]
+      }
+    ]
+  }
+}
