@@ -53,6 +53,7 @@ To turn sounds on or off or change them, use the `/macos-notifications:sound` co
 /macos-notifications:sound off          turn all sounds off
 /macos-notifications:sound on           go back to the default sounds
 /macos-notifications:sound test         send a test notification with each current sound
+/macos-notifications:sound preview Hero hear a sound without changing anything
 /macos-notifications:sound done Hero    change the "finished" sound
 /macos-notifications:sound input off    turn off only the "needs input" sound
 ```
