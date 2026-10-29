@@ -106,7 +106,7 @@ Then allow Script Editor's notifications as described in [Why the setup step](#w
 This plugin deliberately has no dependencies: it only uses what ships with macOS. The tradeoff is that notifications are sent through `osascript`, which macOS attributes to Script Editor. That brings two limitations:
 
 - **The icon is always Script Editor's.** macOS shows the icon of the app that sent the notification, and `osascript` can't change it.
-- **Clicking a notification doesn't take you to the conversation.** `osascript` notifications have no click action, so clicking one opens Script Editor (or does nothing) rather than switching to Claude Code.
+- **Clicking a notification opens Script Editor, not the conversation.** macOS brings the sending app to the front on click, and `osascript` can't change that. To dismiss a notification without opening Script Editor, swipe a banner to the right or click the ✕ that appears when you hover over it; for alerts, click **Close**. If Script Editor does open, ⌘Q quits it.
 
 Both would need a different notification sender, such as `terminal-notifier` from Homebrew or a signed helper app. That means an extra install for everyone, so they're out of scope here.
 
