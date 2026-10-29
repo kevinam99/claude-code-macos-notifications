@@ -125,6 +125,13 @@ To try a real notification:
 echo '{"hook_event_name":"Stop","cwd":"'"$PWD"'"}' | osascript -l JavaScript scripts/notify.js
 ```
 
+## Other platforms
+
+The same notifications are also available for other systems:
+
+- **Linux:** [claude-code-linux-notifications](https://github.com/kevinam99/claude-code-linux-notifications)
+- **Windows:** [claude-code-windows-notifications](https://github.com/kevinam99/claude-code-windows-notifications)
+
 ## License
 
 [MIT](LICENSE)
