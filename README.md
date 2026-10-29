@@ -15,7 +15,10 @@ Conversation: Fix login redirect
 | 🔐 | A tool needs your permission | Ping |
 | ⏳ | Claude has been waiting for your input | Ping |
 
-It works wherever Claude Code runs on your Mac, in the terminal or an IDE extension, and needs nothing beyond macOS: the script runs with the JavaScript for Automation built into `osascript`.
+- **No dependencies.** Nothing to install with Homebrew, npm or pip: the script runs with the JavaScript for Automation built into macOS's `osascript`.
+- **Any terminal or IDE.** It hooks into Claude Code itself, so it works the same in Terminal, iTerm2, Ghostty, VS Code or JetBrains.
+- **Tells conversations apart.** Each notification names the project and the conversation title, not just "Claude is done".
+- **One-command setup.** `/macos-notifications:setup` takes care of the macOS permission step that otherwise drops notifications silently.
 
 ## Install
 
@@ -96,6 +99,15 @@ Then allow Script Editor's notifications as described in [Why the setup step](#w
 - **Questions.** Claude Code reports its own questions as a permission prompt for the `AskUserQuestion` tool. The script recognises that and says "Has a question for you" instead.
 - **The "finished" notification fires after every response**, including in the conversation you're looking at. Hooks can't tell which conversation is on screen.
 - **macOS only.** On other systems, `osascript` doesn't exist and the hooks do nothing.
+
+## Minimal by design
+
+This plugin deliberately has no dependencies: it only uses what ships with macOS. The tradeoff is that notifications are sent through `osascript`, which macOS attributes to Script Editor. That brings two limitations:
+
+- **The icon is always Script Editor's.** macOS shows the icon of the app that sent the notification, and `osascript` can't change it.
+- **Clicking a notification doesn't take you to the conversation.** `osascript` notifications have no click action, so clicking one opens Script Editor (or does nothing) rather than switching to Claude Code.
+
+Both would need a different notification sender, such as `terminal-notifier` from Homebrew or a signed helper app. That means an extra install for everyone, so they're out of scope here.
 
 ## Uninstall
 
